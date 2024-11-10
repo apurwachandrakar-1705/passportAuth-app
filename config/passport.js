@@ -13,7 +13,7 @@ module.exports = function(passport){
             User.findOne({email:email})
             .then(user =>{
                 if(!user){
-                    return done(null, false , {msg: "Who the hell you are.."});
+                    return done(null, false , {msg: "Who you are.."});
                 }
                 // MAtch Password
                 bcrypt.compare(password, user.password,(err,isMatch)=>{
